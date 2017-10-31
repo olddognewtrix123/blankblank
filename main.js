@@ -1,3 +1,9 @@
+//start MongoDB by entering:
+//mongod --smallfiles
+// in a second terminal get node js running by entering:
+//node server.js
+//git add -A  git commit -m "schema and mocha unhunh"  git push origin master
+
 var express = require('express');
 var path = require('path');
 var app = express();
@@ -12,3 +18,5 @@ app.get('/who', (req, res, next) => res.sendFile(path.join(__dirname, './whodat.
 app.listen(app.get('port'), function() {
   console.log('Node app is running on port', app.get('port'));
 });
+
+////

@@ -15,11 +15,3 @@ var path = process.cwd();
 
 
 
-
-//var goElse = document.querySelector('.btn-goElse');
-   
-//   goElse.addEventListener('click', function () {
-//       function myFunction1() {
-//    window.location.href = path +"/who"; 
-//       }
-//      });
