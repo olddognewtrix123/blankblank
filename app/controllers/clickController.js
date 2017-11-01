@@ -8,20 +8,18 @@
 
 (function () {
     
-    var goWhoDat = document.querySelector('.btn-clickMe');
+    var goWho = document.querySelector('.btn-clickMe');
     var clickMe = document.querySelector('.btn-clickMe1');
-    
-     goWhoDat.addEventListener("click", function(){
-        document.getElementById("demo").innerHTML = "Hello World!!!";
-     }, false);
     
     clickMe.addEventListener("click", function(){
         document.getElementById("demo1").innerHTML = "Hello World";
     }, false);
- 
- 
-
- 
+    
+     goWho.addEventListener("click", function(){
+        document.getElementById("demo").innerHTML = "Hello World!!!";
+     }, false);
+    
+    
  
 })(); // <-- include the extra set of parens 
 

@@ -14,7 +14,7 @@ app.use('/controllers', express.static(process.cwd() + '/app/controllers'));
 app.use('/public', express.static(process.cwd() + '/public'));
 
 app.get('/', (req, res, next) => res.sendFile(path.join(__dirname, './public/hi.html')) ) ;
-app.get('/who', (req, res, next) => res.sendFile(path.join(__dirname, './public/whodat.html')) ) ;
+app.get('/who', (req, res, next) => res.sendFile(path.join(__dirname, './public/who.html')) ) ;
 
 
 app.listen(app.get('port'), function() {
