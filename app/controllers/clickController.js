@@ -7,12 +7,22 @@
 // and will be null
 
 (function () {
+    
+    var goWhoDat = document.querySelector('.btn-clickMe');
     var clickMe = document.querySelector('.btn-clickMe1');
- clickMe.addEventListener("click", function(){
-     var clickMe = document.getElementById("clickMe1");
-    console.log(clickMe.id.toString());
-    document.getElementById("demo1").innerHTML = "Hello World";
- });
+    
+     goWhoDat.addEventListener("click", function(){
+        document.getElementById("demo").innerHTML = "Hello World!!!";
+     }, false);
+    
+    clickMe.addEventListener("click", function(){
+        document.getElementById("demo1").innerHTML = "Hello World";
+    }, false);
+ 
+ 
+
+ 
+ 
 })(); // <-- include the extra set of parens 
 
 
