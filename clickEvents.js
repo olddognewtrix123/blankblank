@@ -1,4 +1,3 @@
-'use strict';
 var path = process.cwd();
 (function () {
 
@@ -11,7 +10,3 @@ var path = process.cwd();
 }
       });
 });
-
-
-
-
