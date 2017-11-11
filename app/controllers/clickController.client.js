@@ -2,42 +2,24 @@
 
 (function () {
 
+   var cwd = window.location.href;
    var sendDataButton = document.querySelector('.btn-send1');
 
-function updateClickCount () {
+function updateDB () {
    console.log("Yeow that worked!!!")
 }
 
 sendDataButton.addEventListener('click', function () {
-   updateClickCount ();
+   updateDB ();
+   // now I want it to post to the db, and when
+   // it is done posting to the db to return what
+   // it posted to the db
+   // problem is I cannot do server side code from here 
+   // because this is already doing client side stuff
+   // I need to call clickHanlder from here somehow
+   window.location.href = cwd + "goToClickHandler";
+   
 }, false)
 
 })();   
          
-
- //  function updateClickCount (data) {
- //     var clicksObject = JSON.parse(data);
-//      clickNbr.innerHTML = clicksObject.clicks;
-//   }
-
-   //ajaxFunctions.ready(ajaxFunctions.ajaxRequest('GET', updateClickCount));
-   
-   
-
-  // addButton.addEventListener('click', function () {
-
-  //    ajaxFunctions.ajaxRequest('POST', function () {
-  //       ajaxFunctions.ajaxRequest('GET', updateClickCount);
-  //    });
-
-  // }, false);
-
- //  deleteButton.addEventListener('click', function () {
-
-  //    ajaxFunctions.ajaxRequest('DELETE', function () {
-  //       ajaxFunctions.ajaxRequest('GET', updateClickCount);
-  //    });
-
-  /// }, false);
-
-//})();

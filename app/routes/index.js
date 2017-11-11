@@ -10,6 +10,6 @@ module.exports = function (app) {
 
   app.get('/who', function (req, res) { res.sendFile(path + '/public/who.html'); });
   
-  //app.route('/api/:id/clicks').get(ClickHandler.getClicks)
+  app.route('/goToClickHandler').clickHandler.getClicks();
 
 }
