@@ -2,32 +2,42 @@
 
 (function () {
 
-   var addButton = document.querySelector('.btn-add');
-   var deleteButton = document.querySelector('.btn-delete');
-   var clickNbr = document.querySelector('#click-nbr');
+   var sendDataButton = document.querySelector('.btn-send1');
 
+function updateClickCount () {
+   console.log("Yeow that worked!!!")
+}
 
-   function updateClickCount (data) {
-      var clicksObject = JSON.parse(data);
-      clickNbr.innerHTML = clicksObject.clicks;
-   }
+sendDataButton.addEventListener('click', function () {
+   updateClickCount ();
+}, false)
 
-   ajaxFunctions.ready(ajaxFunctions.ajaxRequest('GET', updateClickCount));
+})();   
+         
 
-   addButton.addEventListener('click', function () {
+ //  function updateClickCount (data) {
+ //     var clicksObject = JSON.parse(data);
+//      clickNbr.innerHTML = clicksObject.clicks;
+//   }
 
-      ajaxFunctions.ajaxRequest('POST', function () {
-         ajaxFunctions.ajaxRequest('GET', updateClickCount);
-      });
+   //ajaxFunctions.ready(ajaxFunctions.ajaxRequest('GET', updateClickCount));
+   
+   
 
-   }, false);
+  // addButton.addEventListener('click', function () {
 
-   deleteButton.addEventListener('click', function () {
+  //    ajaxFunctions.ajaxRequest('POST', function () {
+  //       ajaxFunctions.ajaxRequest('GET', updateClickCount);
+  //    });
 
-      ajaxFunctions.ajaxRequest('DELETE', function () {
-         ajaxFunctions.ajaxRequest('GET', updateClickCount);
-      });
+  // }, false);
 
-   }, false);
+ //  deleteButton.addEventListener('click', function () {
 
-})();
+  //    ajaxFunctions.ajaxRequest('DELETE', function () {
+  //       ajaxFunctions.ajaxRequest('GET', updateClickCount);
+  //    });
+
+  /// }, false);
+
+//})();
