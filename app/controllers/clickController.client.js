@@ -1,25 +1,24 @@
-'use strict';
-
 (function () {
-
-   var cwd = window.location.href;
-   var sendDataButton = document.querySelector('.btn-send1');
-
-function updateDB () {
-   console.log("Yeow that worked!!!")
-}
-
-sendDataButton.addEventListener('click', function () {
-   updateDB ();
-   // now I want it to post to the db, and when
-   // it is done posting to the db to return what
-   // it posted to the db
-   // problem is I cannot do server side code from here 
-   // because this is already doing client side stuff
-   // I need to call clickHanlder from here somehow
-   window.location.href = cwd + "goToClickHandler";
-   
-}, false)
-
-})();   
-         
+     
+     var cwd = window.location.href;
+     // The cwd is https://blankblank-0-olddognewtrix123.c9users.io/
+     
+     var path = process.cwd();
+     
+     var myLocation = window.location.href;
+     
+     var goData = document.querySelector('.btn-goData');
+     
+      
+      
+      // clicking this button sends you to the './who' page
+      goData.addEventListener("click", function(){
+       // console.log("The current url is " + myLocation)
+         window.location.href = path + 'public/profile.html';
+       //res.sendFile(path + '/public/profile.html');
+      }, false);
+     
+     
+  
+ })(); 
+ 

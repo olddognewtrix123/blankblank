@@ -1,14 +1,29 @@
 {
   "name": "blankblank_0",
   "version": "1.0.0",
-  "description": ",-----.,--.                  ,--. ,---.   ,--.,------.  ,------.     '  .--./|  | ,---. ,--.,--. ,-|  || o   \\  |  ||  .-.  \\ |  .---'     |  |    |  || .-. ||  ||  |' .-. |`..'  |  |  ||  |  \\  :|  `--,      '  '--'\\|  |' '-' ''  ''  '\\ `-' | .'  /   |  ||  '--'  /|  `---.      `-----'`--' `---'  `----'  `---'  `--'    `--'`-------' `------'     -----------------------------------------------------------------",
-  "main": "main.js",
+  "description": "Trying to get a node app to work...",
+  "main": "app.js",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "express": "^4.16.2",
+    "mongoose": "^4.13.5"
+  },
+  "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "me",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/olddognewtrix123/blankblank.git"
+  },
+  "keywords": [
+    "node",
+    "application"
+  ],
+  "author": "John Gillespie",
   "license": "ISC",
-  "dependencies": {
-    "express": "^4.16.2"
-  }
+  "bugs": {
+    "url": "https://github.com/olddognewtrix123/blankblank/issues"
+  },
+  "homepage": "https://github.com/olddognewtrix123/blankblank#readme"
 }
