@@ -20,9 +20,11 @@ var port = process.env.PORT || 8080;
 var bodyParser = require('body-parser');
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
+var path = process.cwd();
 
 // middleware that exposes the controllers
 app.use('/controllers', express.static(process.cwd() + '/app/controllers'));
+app.use('/public', express.static(process.cwd() + '/public'));
 
 
 var mongoose = require("mongoose");
@@ -51,12 +53,11 @@ app.post("/addname", (req, res) => {
         });
 });
 
-//  https://stackoverflow.com/questions/36434978/how-to-redirect-to-another-page-in-node-js 
-//app.get("/goData", (req, res) =>  {
-//        res.sendFile(__dirname + "/public/data.html");
-//});
 
-
+app.route('/goData')
+		.get(function (req, res) {
+			res.sendFile(path + '/public/data.html');
+		});
 
 
 app.listen(port, () => {
